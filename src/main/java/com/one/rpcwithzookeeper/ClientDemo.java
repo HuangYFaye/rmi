@@ -16,6 +16,8 @@ public class ClientDemo {
         //JDK动态代理，因为客户端根本没有IHello的实现类
         IHello hello = rpcClientProxy.clientProxy(IHello.class,serviceDiscovery);;
         //代理类hello实际调用了invoke方法
-        System.out.println(hello.sayHello("One"));
+        for (int i = 1; i < 10; i++) {
+            System.out.println(hello.sayHello("One"));
+        }
     }
 }

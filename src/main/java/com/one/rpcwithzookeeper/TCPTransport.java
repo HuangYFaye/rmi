@@ -18,7 +18,7 @@ public class TCPTransport {
     }
 
     private Socket newSocket(){
-        System.out.println("创建一个新的连接");
+        System.out.println("创建一个新的连接:"+host + ":" + port);
         Socket socket = null;
         try {
             socket = new Socket(host,port);
